@@ -1,6 +1,6 @@
 # GORM V2
 1. GORM V2 安装和连接 MySQL
-2. GORM V2 约定和结构体标签
+2. GORM V2 约定和结构体标签约束
 3. GORM V2 操作数据库表
 4. GORM V2 执行原生 SQL
 5. GORM V2 新增
