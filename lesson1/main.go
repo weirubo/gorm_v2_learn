@@ -72,6 +72,7 @@ func main() {
 			return
 		}
 	}()
+	// 初始化数据库
 	InitDB()
 	// 查看是否关闭默认启用事务
 	fmt.Println(gormDB.SkipDefaultTransaction)
