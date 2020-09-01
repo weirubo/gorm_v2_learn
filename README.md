@@ -12,5 +12,5 @@
 11. GORM V2 钩子方法
 12. GORM V2 Logger
 13. GORM V2 Scopes
-14. GORM V2 读写分离
-15. GORM V2 Callbacks
+14. GORM V2 Callbacks
+15. GORM V2 读写分离
