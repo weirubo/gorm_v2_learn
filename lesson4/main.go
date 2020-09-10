@@ -288,6 +288,14 @@ func main() {
 	gormDB.Where(&Student{Name: "coco", Age: 19}).Find(&student)
 	fmt.Println(student)*/
 	// Map
+	/*var student Student
+	gormDB.Where(map[string]interface{}{"name": "coco", "age": 19}).Find(&student)
+	fmt.Println(student)*/
+
+	// 主键切片条件
+	/*var students []Student
+	gormDB.Where([]int{15,16,17}).Find(&students)
+	fmt.Println(students)*/
 
 	// 内联条件
 
