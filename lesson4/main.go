@@ -217,9 +217,84 @@ func main() {
 
 	// 查询
 	// 检索单个对象
+	// 主键升序 LIMIT 1
+	/*student := Student{}
+	gormDB.First(&student)
+	fmt.Println(student)*/
+
+	// 没有指定排序字段 LIMIT 1
+	/*student := Student{}
+	gormDB.Take(&student)
+	fmt.Println(student)*/
+
+	// 主键降序 LIMIT 1
+	/*student := Student{}
+	result := gormDB.Last(&student)
+	fmt.Println(student)
+	fmt.Println(result.RowsAffected)
+	fmt.Println(result.Error)
+	fmt.Println(errors.Is(result.Error, gorm.ErrRecordNotFound))*/
+
 	// 根据主键检索
+	/*student := Student{}
+	// gormDB.First(&student, 16)
+	gormDB.First(&student, "16")
+	fmt.Println(student)*/
+
+	/*var students  []Student
+	gormDB.Find(&students, []int{15, 16, 17})
+	fmt.Println(students)*/
 	// 检索对象
+	/*var students  []Student
+	result := gormDB.Find(&students)
+	fmt.Println(students)
+	fmt.Println(result.RowsAffected)
+	fmt.Println(result.Error)*/
 	// 条件查询
+	// String
+	/*student := Student{}
+	gormDB.Where("name = ?", "bear").First(&student)
+	fmt.Println(student)*/
+
+	/*var students []Student
+	gormDB.Where("name <> ?", "bear").Find(&students)
+	fmt.Println(students)*/
+
+	/*var students []Student
+	gormDB.Where("name IN ?", []string{"bear", "panda"}).Find(&students)
+	fmt.Println(students)*/
+
+	/*var students []Student
+	gormDB.Where("name LIKE ?", "%a%").Find(&students)
+	fmt.Println(students)*/
+
+	/*var students []Student
+	gormDB.Where("name = ? AND age > ?", "coco", 18).Find(&students)
+	fmt.Println(students)*/
+
+	/*var students []Student
+	lastWeek := time.Now().Add(time.Hour*24*-7)
+	// fmt.Println(lastWeek)
+	gormDB.Where("updated_at > ?", lastWeek).Find(&students)
+	fmt.Println(students)*/
+
+	/*var students []Student
+	lastWeek := time.Now().Add(time.Hour*24*-7)
+	today := time.Now()
+	gormDB.Where("created_at BETWEEN ? AND ?", lastWeek, today).Find(&students)
+	fmt.Println(students)*/
+	// Struct
+	/*var student Student
+	gormDB.Where(&Student{Name: "coco", Age: 19}).Find(&student)
+	fmt.Println(student)*/
+	// Map
+
+	// 内联条件
+
+	// Not
+
+	// Or
+
 	// 查询特定字段
 	// order排序
 	// Limit & Offset
