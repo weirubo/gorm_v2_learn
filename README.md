@@ -2,7 +2,7 @@
 1. [GORM V2 安装和连接 MySQL](https://mp.weixin.qq.com/s/7L-O1y8RYML0VBAzfIjuZw)
 2. [GORM V2 模型定义、约定、标签](https://mp.weixin.qq.com/s/HrTriTqdUPP7CcBudN8q-w)
 3. [GORM V2 自动迁移和迁移接口的方法](https://mp.weixin.qq.com/s/a1jRQyqYBmBVlNwoJnBwcw)
-4. GORM V2 写操作
+4. [GORM V2 写操作](https://mp.weixin.qq.com/s/_rsUTGydnPmuRlh-51zmBQ)
 5. GORM V2 读操作
 6. GORM V2 原生 SQL 和生成 SQL
 7. GORM V2 关联查询
