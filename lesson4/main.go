@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// 新增、删除、修改、查询
+// 新增、删除、修改
 var (
 	sqlDB  *sql.DB
 	gormDB *gorm.DB

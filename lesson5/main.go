@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// 新增、删除、修改、查询
+// 查询
 var (
 	sqlDB  *sql.DB
 	gormDB *gorm.DB
@@ -157,8 +157,51 @@ func main() {
 	fmt.Println(students)*/
 
 	// 内联条件
+	// 根据非整型主键获取记录
+	/*student := Student{}
+	gormDB.Find(&student, "id = ?", 17)
+	fmt.Println(student)*/
 
-	// Not
+	// 普通条件查询
+	/*var student Student
+	gormDB.Find(&student, "name = ?", "cat")
+	fmt.Println(student)*/
+
+	// 多条件查询
+	/*student := Student{}
+	gormDB.Find(&student, "name <> ? AND age >= ?", "cat", 0)
+	fmt.Println(student)*/
+
+	// struct 条件查询
+	/*var student Student
+	gormDB.Find(&student, &Student{Name: "cat2", Age: 0})
+	fmt.Println(student)*/
+
+	// map 条件查询
+	/*var student Student
+	gormDB.Find(&student, map[string]interface{}{"name":"cat2", "age":0})
+	fmt.Println(student)*/
+
+	// Not 条件
+	// 普通 Not 条件
+	/*var student Student
+	gormDB.Not("name = ?", "cat").First(&student)
+	fmt.Println(student)*/
+
+	// Not In
+	/*var students []Student
+	gormDB.Not(map[string]interface{}{"id":[]int{15,17}}).Find(&students)
+	fmt.Println(students)*/
+
+	// Struct
+	/*var student Student
+	gormDB.Not(Student{Name: "cat", Age: 18}).Find(&student)
+	fmt.Println(student)*/
+
+	// 主键
+	/*var students []Student
+	gormDB.Not([]int{1,2,3,15,16}).Find(&students)
+	fmt.Println(students)*/
 
 	// Or
 
