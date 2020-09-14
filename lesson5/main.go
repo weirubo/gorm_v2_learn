@@ -204,8 +204,29 @@ func main() {
 	fmt.Println(students)*/
 
 	// Or
+	/*var students []Student
+	gormDB.Where("name = ?", "cat").Or("name = ?", "cat2").Find(&students)
+	fmt.Println(students)*/
+
+	// struct
+	/*var students []Student
+	gormDB.Where("name = ?", "cat2").Or(Student{Name: "cat", Age: 19}).Find(&students)
+	fmt.Println(students)*/
+
+	// map
+	/*var students []Student
+	gormDB.Where("name = ?", "cat2").Or(map[string]interface{}{"name":"cat", "age":19}).Find(&students)
+	fmt.Println(students)*/
 
 	// 查询特定字段
+	/*var students []Student
+	gormDB.Select("name", "age").Find(&students)
+	fmt.Println(students)*/
+
+	// slice
+	/*var students []Student
+	gormDB.Select([]string{"name", "age"}).Find(&students)
+	fmt.Println(students)*/
 	// order排序
 	// Limit & Offset
 	// Group & Having
