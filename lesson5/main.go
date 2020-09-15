@@ -228,7 +228,17 @@ func main() {
 	gormDB.Select([]string{"name", "age"}).Find(&students)
 	fmt.Println(students)*/
 	// order排序
+	/*var students []Student
+	gormDB.Order("id desc, age").Find(&students)
+	fmt.Println(students)*/
+	// 多个排序字段
+	/*var students []Student
+	gormDB.Order("id desc").Order("age").Find(&students)
+	fmt.Println(students)*/
 	// Limit & Offset
+	/*var students []Student
+	gormDB.Limit(5).Offset(1).Find(&students)
+	fmt.Println(students)*/
 	// Group & Having
 	// Distinct
 	// Joins
